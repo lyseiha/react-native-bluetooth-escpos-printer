@@ -174,6 +174,7 @@ implements BluetoothServiceStateObserver{
         if (sound) {
             tsc.addSound(2, 100); //打印标签后 蜂鸣器响
         }
+        tsc.addPeel(TscCommand.ENABLE.ON);
         Vector<Byte> bytes = tsc.getCommand();
         byte[] tosend = new byte[bytes.size()];
         for(int i=0;i<bytes.size();i++){
